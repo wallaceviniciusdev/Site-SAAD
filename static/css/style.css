@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,700i');
+]]
+/* Box-sizing reset: //w3bits.com/?p=3225 */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+	font-family: Montserrat!important;
+	overflow: hidden;
+}
+
+header {
+	background-color: #294fa5;
+	width: 100%;
+	height: 500px;
+	overflow-x: hidden;
+}
+
+header .container {
+	padding-top: 40px;
+}
+
+header nav {
+	text-align: right;
+	width: 100%;
+}
+
+header #sidebar {
+	background: white;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: -400px;
+	z-index: 1;
+	box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+header #sidebar ul {
+	padding: 0;
+}
+
+header #sidebar ul li {
+	list-style: none;
+	padding: 15px 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	font-size: 12px;
+	font-weight: bold;
+	transition: all 0.2s;
+}
+
+header #sidebar ul li::before {
+	content: "\f138";
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	margin-left: -20px;
+	margin-right: 10px;
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+header #sidebar ul li:hover::before{
+	opacity: 1;
+	margin-left: 0;
+	color: #294fa5;
+}
+
+header #sidebar ul li:hover {
+	color: #294fa5;
+}
+
+header #sidebar ul li:first-child{
+	background: #355fc0;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+header #sidebar ul li:first-child::before {
+	display: none;
+}
+
+header nav ul#logo {
+	float: left;
+	margin-left: -20px;
+	padding: 0;
+}
+
+header nav ul li {
+	background: transparent;
+	display: inline-block;
+	font-size: 12px;
+	color: white;
+	padding: 6px 20px;
+	transition: all 0.2s;
+	border-radius: 100px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+header nav ul li#icon-menu {
+	display: none;
+}
+
+header nav ul li#login {
+	padding: 4px 20px;
+	border: 2px solid transparent;
+	background: white;
+	color: #294fa5;
+}
+
+header nav ul li#login:hover {
+	background: transparent;
+	border-color: white;
+	color: white;
+}
+
+header nav ul li.item:hover {
+	background: white;
+	color: #294fa5;
+}
+
+header .row {
+	margin-top: 100px;
+	padding-bottom: 100px;
+}
+
+header #title {
+	text-align: left;
+	color: white;
+}
+
+header #title h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+header #title h6 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #6f95ec;
+	text-transform: uppercase;
+}
+
+header #title p {
+	font-size: 14px;
+	text-align: justify;
+	margin-top: 30px;
+}
+
+header #title button {
+	background: transparent;
+	border: 2px solid white;
+	padding: 9px 30px;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	border-radius: 40px;
+	transition: all 0.2s;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+header #title button::after {
+	content: "\f138";
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	margin-left: 10px;
+}
+
+header #title button:hover {
+	background: white;
+	color: #294fa5;
+}
+
+header #image-header {
+	margin-top: -85px;
+	padding-left: 50px;
+}
+
+header #modalLogin .modal-dialog {
+	max-width: 700px;
+	top: 50%;
+	transform: translateY(-56%);
+}
+
+header form .row {
+	margin: 0;
+	padding: 50px 0;
+}
+header form .title {
+	text-align: center;
+}
+
+header form .title img {
+	margin-bottom: 20px;
+}
+
+header form .title h1 {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+header form .title p {
+	color: #AAA;
+	font-size: 12px;
+}
+
+header form label {
+	font-size: 11px;
+	color: #AAA;
+}
+
+header form #conected {
+	padding: 14px 0 0 26px;
+}
+
+header form label.conected {
+	font-size: 12px;
+	color: black;
+	padding-top: 4px;
+}
+
+header form a {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+header form input[type="text"], input[type="password"] {
+	background: transparent;
+	width: 100%;
+	border: 2px solid #AAA;
+	border-radius: 40px;
+	padding: 10px 20px;
+	font-size: 12px;
+	outline: none;
+	transition: all 0.2s;
+}
+
+header form input:focus {
+	border-color: #294fa5;
+	color: #294fa5;
+}
+
+header form #buttons {
+	margin-top: 10px;
+}
+
+header form #entrar {
+	background-color: #294fa5;
+	width: calc(50% - 10px);
+	padding: 10px 20px;
+	font-size: 12px;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	border-radius: 40px;
+	float: left;
+	margin-right: 10px;
+}
+
+header form #registrar {
+	background-color: #6f95ec;
+	width: 50%;
+	padding: 10px 20px;
+	font-size: 12px;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	border-radius: 40px;
+}
+
+header form #image-login {
+	margin-left: 25px;
+}
+
+.modal-content {
+	border-radius: 10px!important;
+}
+
+.modal-open .container-fluid, .modal-open  .container {
+    -webkit-filter: blur(5px);
+}
+
+.modal-header {
+    background-color: #294fa5;
+    border-radius: 8px 8px 0px 0px!important;
+}
+
+.modal-footer {
+	border-radius: 0 0 8px 8px!important;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 600px){
+	header {
+		height: auto;
+		padding: 0 20px;
+	}
+
+	header #image-header, nav ul li.item, li#login, form #image-login {
+		display: none;
+	}
+
+	header nav ul li#icon-menu {
+		background: white;
+		color: #294fa5;
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+		font-size: 15px;
+		line-height: 35px;
+		padding: 0;
+		text-align: center;
+		border: 2px solid white;
+		display: inline-block;
+		cursor: pointer;
+	}
+	
+}
