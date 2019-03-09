@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>SAAD</title>
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="static/css/events.css">
+	<link rel="stylesheet" type="text/css" href="static/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+	<header>
+		<!-- Modal -->
+		<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<form method="post" accept-charset="utf-8">
+						<div class="row">
+							<div class="col-md">
+								<img src="static/images/login-image.svg" alt="" height="353" id="image-login">
+							</div>
+							<div class="col-md">
+								<div class="title">
+									<h1>Login</h1>
+									<p>Acesse nosso sistema</p>
+								</div>
+								<div class="modal-body">
+									<label for="username">Seu e-mail:</label>
+									<input type="text" name="username" placeholder="Digite seu e-mail">
+
+									<label for="password">Sua senha:</label>
+									<input type="text" name="password" placeholder="Digite sua senha">
+									
+									<div id="conected" class="custom-control custom-checkbox my-1 mr-sm-2">
+										<input type="checkbox" class="custom-control-input" id="customControlInline">
+								    	<label class="custom-control-label conected" for="customControlInline">Manter Conectado</label>
+									</div>
+	
+									<a href=""><i class="fas fa-key"></i> Esqueci a senha</a>
+
+									<div id="buttons">
+										<button type="submit" id="entrar">Entrar</button> 
+										<button type="" id="registrar">Registrar</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<nav>
+				<ul id="logo">
+					<li><a href="" title=""><img src="static/images/logo.png" height="30" alt=""></a></li>
+				</ul>
+				<ul id="menu">
+					<li class="item">Inicio</li>
+					<li class="item">SAAD</li>
+					<li class="item">Artigos</li>
+					<li class="item">Notícias</li>
+					<li class="item">Contato</li>
+					<li class="item">Currículos</li>
+					<li class="item">Eventos</li>
+					<li id="login" data-toggle="modal" data-target="#modalLogin"><i class="far fa-user-circle"></i> Acessar</li>
+					<li id="icon-menu"><i class="fas fa-list-ul"></i></li>
+				</ul>
+			</nav>
+
+			<div id="sidebar">
+				<ul id="menu">
+					<li id="loginSide" data-toggle="modal" data-target="#modalLogin"><i class="far fa-user-circle"></i> Acessar</li>
+					<li class="item">Inicio</li>
+					<li class="item">SAAD</li>
+					<li class="item">Artigos</li>
+					<li class="item">Notícias</li>
+					<li class="item">Contato</li>
+					<li class="item">Currículos</li>
+					<li class="item">Eventos</li>
+					<li class="item fechar"><i class="fas fa-times"></i> Fechar</li>
+					</ul>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div id="title">
+						<h1>Sejam bem-vindo(a) ao SAAD</h1>
+						<h6>Novo site estreia e causa impactogrande</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit magni, excepturi asperiores! Soluta eos placeat totam unde fuga natus, eligendi expedita distinctio ipsam corporis quisquam ad. Optio animi error saepe.</p>
+						<button>Mais informações</button>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<img src="static/images/header-image.svg" alt="" id="image-header">
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="events">
+		<div class="container">
+			<div id="section-title">
+				<h6>EVENTOS</h6>
+				<h1>Calendário de Eventos</h1>
+				<div></div>
+				<p>Acompanhe nossos eventos</p>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div id="calendar">
+						<div class="month"> 
+							<ul>
+								<li class="prev">&#10094;</li>
+								<li class="next">&#10095;</li>
+								<li>Março de 2018</li>
+							</ul>
+						</div>
+
+						<ul class="weekdays">
+							<li>Dom</li>
+							<li>Seg</li>
+							<li>Ter</li>
+							<li>Qua</li>
+							<li>Qui</li>
+							<li>Sex</li>
+							<li>Sáb</li>
+						</ul>
+
+						<ul class="days"> 
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li><span class="active">10</span></li>
+							<li>11</li>
+							<li>12</li>
+							<li>13</li>
+							<li>14</li>
+							<li>15</li>
+							<li>16</li>
+							<li>17</li>
+							<li>18</li>
+							<li>19</li>
+							<li>20</li>
+							<li>21</li>
+							<li>22</li>
+							<li>23</li>
+							<li>24</li>
+							<li>25</li>
+							<li>26</li>
+							<li>27</li>
+							<li>28</li>
+							<li>29</li>
+							<li>30</li>
+							<li>31</li>
+						</ul>
+					</div>
+
+					<div id="tracks">
+						<h1><i class="far fa-bookmark"></i> Marcadores</h1>
+						<ul>
+							<li><i class="fas fa-circle"></i> Acontecendo</li>
+							<li><i class="fas fa-circle"></i> Encerrado</li>
+							<li><i class="fas fa-circle"></i> Ainda vai acontecer</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<div id="events-list">
+						<div id="events-week">
+							<ul>
+								<li>
+									<h1>23</h1>
+									<p>SEG</p>
+								</li>
+
+								<li>
+									<h1>24</h1>
+									<p>TER</p>
+								</li>
+
+								<li>
+									<h1>25</h1>
+									<p>QUA</p>
+								</li>
+
+								<li>
+									<h1>26</h1>
+									<p>QUI</p>
+								</li>
+
+								<li class="selected">
+									<h1>27</h1>
+									<p>SEX</p>
+								</li>
+
+								<li>
+									<h1>28</h1>
+									<p>SAB</p>
+								</li>
+
+								<li>
+									<h1>29</h1>
+									<p>DOM</p>
+								</li>
+							</ul>
+						</div>
+						<div id="events-day">
+							<ul>
+								<li>
+									<a href="" class="blue">teste de rectecncias</a>
+									<a href="" class="blue selected">teste de rectecncias</a>
+									<a href="" class="blue">teste de rectecncias</a>
+								</li>
+
+								<li>
+									
+								</li>
+
+								<li>
+									<a href="" class="green">teste de rectecncias</a>
+									<a href="" class="blue">teste de rectecncias</a>
+								</li>
+
+								<li>
+									<a href="" class="yellow">teste de rectecncias</a>
+									<a href="" class="green">teste de rectecncias</a>
+									<a href="" class="green">teste de rectecncias</a>
+								</li>
+
+								<li>
+									<a href="" class="blue">teste de rectecncias</a>
+								</li>
+
+								<li>
+									<a href="" class="green">teste de rectecncias</a>
+									<a href="" class="yellow">teste de rectecncias</a>
+									<a href="" class="yellow">teste de rectecncias</a>
+								</li>
+
+								<li>
+									<a href="" class="green">teste de rectecncias</a>
+									<a href="" class="yellow">teste de rectecncias</a>
+									<a href="" class="blue">teste de rectecncias</a>
+								</li>
+
+								<li>
+									<a href="" class="blue">teste de rectecncias</a>
+									<a href="" class="green">teste de rectecncias</a>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div id="event-selected">
+						<img src="http://sistema.saad.net.br/system/events/images/000/000/021/thumb/foto_palestrante_filomena.jpg?1534853846" alt="">
+						<h1>Um Oceano que nos Une: como estudar na Universidade de Lisboa?</h1>
+						<p>Filomena Ferreira é assessora de Relações Internacionais do ISEG - Instituto Superior de Economia e Gestão da Universidade de Lisboa</p>
+						<div class="separate"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	
+	<script src="static/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="static/js/popper.min.js" type="text/javascript"></script>
+	<script src="static/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="static/js/global.js" type="text/javascript"></script>
+</body>
+</html>

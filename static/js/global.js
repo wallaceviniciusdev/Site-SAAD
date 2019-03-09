@@ -17,7 +17,7 @@ function menu(){
 		$("#sidebar").animate({
 			right: -400
 		}, 100, function(e){
-			$("#sidebar").hide();
+			$(this).hide();
 		});
 	});
 }

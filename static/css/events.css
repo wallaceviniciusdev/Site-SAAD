@@ -1,0 +1,264 @@
+#calendar {
+  border-radius: 8px;
+}
+
+.month {
+  padding: 20px 25px;
+  width: 100%;
+  background: #294fa5;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month ul li {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#d6eaf2;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13%;
+  color: #4b6f7e;
+  text-align: center;
+  font-size: 11px;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #ecf6fa;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px 6px;
+  background: #294fa5;
+  border-radius: 20px;
+  color: white !important;
+  font-weight: bold;
+}
+
+#tracks {
+  margin-top: 40px;
+}
+
+#tracks h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #294fa5;
+}
+
+#tracks ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+#tracks li {
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+#tracks li:nth-child(1) i {
+  color: #4dbd74;
+}
+
+#tracks li:nth-child(2) i {
+  color: #ecf6fa;
+}
+
+#tracks li:nth-child(3) i {
+  color: #f4ba4a;
+}
+
+#events-week ul {
+  padding: 0;
+}
+
+#events-week li {
+  text-align: center;
+  width: 14%;
+  height: 80px;
+  padding: 15px 0 0 0;
+  display: inline-block;
+  border-right: 1px dashed rgba(0,0,0,0.2);
+  margin-right: -5px;
+}
+
+#events-week li.selected {
+  border-top: 4px solid #294fa5;
+}
+
+#events-week li h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#events-week li p {
+  color: #4b6f7e;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+#events-day ul {
+  padding: 0;
+  list-style: none;
+}
+
+#events-day ul li {
+  font-size: 11px;
+  max-width: 13.78%;
+  display: inline-block;
+}
+
+#events-day ul li a {
+  width: 90px;
+  background: transparent;
+  padding: 5px 15px;
+  display: inline-block;
+  white-space: nowrap;                   
+  overflow: hidden;              /* "overflow" value must be different from "visible" */ 
+  text-overflow: ellipsis;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+#events-day ul li a.green {
+  background: #4dbd74;
+  border: 2px solid #4dbd74;
+  color: white;
+}
+
+#events-day ul li a.yellow {
+  background: #f4ba4a;
+  border: 2px solid #f4ba4a;
+  color: white;
+}
+
+#events-day ul li a.blue {
+  background: #ecf6fa;
+  border: 2px solid #ecf6fa;
+  color: black;
+}
+
+#events-day ul li a.green:hover {
+  background: transparent;
+  border: 2px solid #4dbd74;
+  color: #4dbd74;
+}
+
+#events-day ul li a.yellow:hover {
+  background: transparent;
+  color: #f4ba4a;
+  border: 2px solid #f4ba4a;
+}
+
+#events-day ul li a.blue:hover {
+  background: transparent;
+  color: #black;
+  border: 2px solid #ecf6fa;
+}
+
+#events-day ul li a.green.selected {
+  background: transparent;
+  border: 2px solid #4dbd74;
+  color: #4dbd74;
+}
+
+#events-day ul li a.yellow.selected {
+  background: transparent;
+  color: #f4ba4a;
+  border: 2px solid #f4ba4a;
+}
+
+#events-day ul li a.blue.selected {
+  background: transparent;
+  color: #577aca;
+  border: 2px solid #577aca;
+}
+
+#event-selected {
+  margin-top: 50px;
+  text-align: justify
+}
+
+#event-selected img {
+  float: left;
+  margin-right: 25px;
+  border-radius: 8px;
+}
+
+#event-selected h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #294fa5;
+}
+
+div.separate {
+  background: #577aca;
+  width: 40px;
+  height: 2px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 950px){
+  body {
+    overflow-x: scroll;
+  }
+
+  .col-md-8 {
+    overflow: scroll;
+  }
+
+  #event-selected img {
+    float: inherit;
+  }
+
+  #events-list {
+    width: 725px;
+    overflow: scroll;
+  }
+}
+
