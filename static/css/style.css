@@ -90,7 +90,7 @@ header #sidebar ul li:first-child{
 	font-weight: bold;
 }
 
-header #sidebar ul li:first-child::before {
+header #sidebar ul li:first-child::before, li.fechar::before {
 	display: none;
 }
 

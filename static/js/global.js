@@ -16,8 +16,8 @@ function menu(){
 	$("li.fechar").click(function(){
 		$("#sidebar").animate({
 			right: -400
-		}, 100, function(){
-			this.hide();
+		}, 100, function(e){
+			$("#sidebar")
 		});
 	});
 }
