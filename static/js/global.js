@@ -13,6 +13,13 @@ function menu(){
 			right: -22
 		}), 100;
 	});
+	$("li.fechar").click(function(){
+		$("#sidebar").animate({
+			right: -400
+		}, 100, function(){
+			this.hide();
+		});
+	});
 }
 
 function masonry() {
