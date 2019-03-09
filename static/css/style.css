@@ -51,7 +51,7 @@ header #sidebar ul {
 	padding: 0;
 }
 
-header #sidebar ul li {
+header #sidebar ul li, a {
 	list-style: none;
 	padding: 15px 20px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -80,7 +80,7 @@ header #sidebar ul li:hover {
 	color: #294fa5;
 }
 
-header #sidebar ul li:first-child{
+header #sidebar ul li#loginSide:first-child{
 	background: #355fc0;
 	width: 100%;
 	text-align: center;
@@ -110,6 +110,11 @@ header nav ul li {
 	margin-right: 10px;
 }
 
+header nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+
 header nav ul li#icon-menu {
 	display: none;
 }
@@ -130,6 +135,11 @@ header nav ul li#login:hover {
 header nav ul li.item:hover {
 	background: white;
 	color: #294fa5;
+}
+
+header nav ul li.item:hover a {
+	color: #294fa5;
+	text-decoration: none;
 }
 
 header .row {

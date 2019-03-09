@@ -4,6 +4,7 @@
 
 function titleAnimation() {
 	$('header .container').addClass("animated bounceInDown");
+	$('#events').addClass("animated fadeInDown");
 }
 
 function menu(){
