@@ -340,7 +340,9 @@ div.separate {
   font-size: 12px;
   padding: 0 20px;
   float: right;
-  overflow:
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   border-radius: 0 40px 40px 0;
 }
 
