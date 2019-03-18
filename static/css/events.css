@@ -220,7 +220,6 @@
 }
 
 #event-selected {
-  margin-top: 50px;
   text-align: justify
 }
 
@@ -236,11 +235,113 @@
   color: #294fa5;
 }
 
+#event-selected p {
+  font-size: 12px;
+}
+
+#event-selected h5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #294fa5;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #577aca;
+  margin-bottom: 20px;
+}
+
 div.separate {
   background: #577aca;
   width: 40px;
   height: 2px;
-  margin-top: 10px;
+  margin-top: 30px;
+}
+
+.list-events {
+  display: block; 
+  padding: 0 20px;
+}
+
+/* bootstrap */
+.alert {
+  font-size: 12px;
+}
+
+.nav-pills li a {
+  background: rgba(0,0,0,0.03);
+  margin-right: 10px;
+  border-bottom: none;
+  color: #294fa5!important;
+  border-radius: 40px!important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #294fa5!important;
+  color: white!important;
+  border-radius: 40px;
+}
+
+.form-row input {
+  margin-bottom: 20px;
+}
+
+.form-row input[type="text"], input[type="password"] {
+  background: transparent;
+  width: 100%;
+  border: 2px solid #AAA;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 12px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form-row input:focus {
+  border-color: #294fa5;
+  color: #294fa5;
+}
+
+.form-row input[type="submit"]{
+  background-color: #294fa5;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 40px;
+  float: left;
+  margin-right: 10px;
+}
+
+.form-row input[type="file"]{
+  display: none;
+}
+
+.file-button {
+  background-color: #d6eaf2;
+  width: 40%;
+  color: #4b6f7e;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 20px;
+  margin-right: -4px;
+  text-align: center;
+  float: left;
+  border-radius: 40px 0 0 40px;
+  margin-bottom: 20px;
+}
+
+#file-name {
+  background-color: #ecf6fa;
+  width: 60%;
+  height: 38px;
+  line-height: 38px;
+  font-size: 12px;
+  padding: 0 20px;
+  float: right;
+  overflow:
+  border-radius: 0 40px 40px 0;
 }
 
 @media only screen and (max-width: 950px){
@@ -253,12 +354,33 @@ div.separate {
   }
 
   #event-selected img {
-    float: inherit;
+    float: left;
+    height: 90px;
+  }
+
+  #event-selected h1 {
+    font-size: 19px;
+  }
+
+  #event-selected p {
+    font-size: 12px;
   }
 
   #events-list {
     width: 725px;
     overflow: scroll;
+  }
+
+  .nav-pills li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .list-events {
+    display: block!important;
+    overflow: scroll; 
+    padding: 0 20px;
   }
 }
 
