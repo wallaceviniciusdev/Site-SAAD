@@ -14,13 +14,6 @@ function menu(){
 			right: -22
 		}), 100;
 	});
-	$("li.fechar").click(function(){
-		$("#sidebar").animate({
-			right: -400
-		}, 100, function(e){
-			$(this).hide();
-		});
-	});
 }
 
 function masonry() {
@@ -74,6 +67,19 @@ var $input    = document.getElementById('input-file'),
 $input.addEventListener('change', function(){
   $fileName.textContent = this.value;
 });
+
+$(document).click(function(e){
+    if(!$(e.target).is("#sidebar") && !$(e.target).is("#icon-menu")){
+    	console.log("nao e ele")
+	    $("#sidebar").animate({
+			right: -400
+		}, 100, function(e){
+			$(this).hide();
+		});
+    }else{
+    	console.log("e ele viu")
+    }
+}); 
 
 titleAnimation();
 menu();
