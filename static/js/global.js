@@ -1,7 +1,3 @@
-//$("body").css("filter", "invert(100%)").css("background", "black");
-//$("img.block").css("filter", "invert(100%)")
-
-
 function titleAnimation() {
 	$('header .container').addClass("animated bounceInDown");
 	$('#events').addClass("animated fadeInDown");
@@ -16,19 +12,16 @@ function menu(){
 	});
 }
 
-function masonry() {
-	$("#works .items .block").css("display", "none");
-	$("#works .items .block").slice(0, 7).css("display", "inline-block");
-	$("#loadMore").on('click', function (e) {
-	    e.preventDefault();
-	    $("#works .items .block:hidden").slice(0, 4).slideDown().css("display", "inline-block");
-	    if ($("#works .items .block:hidden").length == 0) {
-	        $("#loadMore").css("opacity", 0.5);
-	    }
-	    $('html,body').animate({
-	        scrollTop: $(this).offset().top
-	    }, 1500);
-	});	
+function closeSidebar(){
+	$(document).click(function(e){
+		if(!$(e.target).is("#sidebar") && !$(e.target).is("#icon-menu")){
+			$("#sidebar").animate({
+				right: -400
+			}, 100, function(e){
+				$(this).hide();
+			});
+		}
+	});
 }
 
 function buttonTop(){
@@ -48,40 +41,35 @@ function buttonTop(){
 	});
 }
 
-$("input.telefone").mask("(99) 9999-9999?9").focusout(function (event) {  
-    var target, phone, element;  
-    target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
-    phone = target.value.replace(/\D/g, '');
-    element = $(target);  
-    element.unmask();  
-    if(phone.length > 10) {  
-        element.mask("(99) 99999-9999");  
-    } else {  
-        element.mask("(99) 9999-9999");  
-    }  
-});
+function telefoneMask(){
+	$("input.telefone").mask("(99) 9999-9999?9").focusout(function(event) {  
+		var target, phone, element;
+		target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+		phone = target.value.replace(/\D/g, '');
+		element = $(target);  
+		element.unmask();  
 
-var $input    = document.getElementById('input-file'),
-    $fileName = document.getElementById('file-name');
+		if(phone.length > 10){  
+			element.mask("(99) 99999-9999");  
+		}else{  
+			element.mask("(99) 9999-9999");  
+		}  
+	});
+}
 
-$input.addEventListener('change', function(){
-  $fileName.textContent = this.value;
-});
+function nameFile(){
+	var input = $('#input-file');
+	var fileName = $('#file-name');
 
-$(document).click(function(e){
-    if(!$(e.target).is("#sidebar") && !$(e.target).is("#icon-menu")){
-    	console.log("nao e ele")
-	    $("#sidebar").animate({
-			right: -400
-		}, 100, function(e){
-			$(this).hide();
-		});
-    }else{
-    	console.log("e ele viu")
-    }
-}); 
+	input.change(function(){
+		fileName.text($(this).val());
+	});
+}
 
-titleAnimation();
-menu();
+nameFile(); //coloca o nome do arquivo selecionado no <span> da página de eventos > submição de trabalhos
+telefoneMask(); //coloca máscara no input de telefone
+titleAnimation(); //faz a animação de entrada do topo
+menu(); //função que abre o menu
+closeSidebar(); //função que fecha o menu
 
 
