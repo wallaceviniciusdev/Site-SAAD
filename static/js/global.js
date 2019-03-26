@@ -66,6 +66,41 @@ function nameFile(){
 	});
 }
 
+
+    function init() {
+      if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+      var $$ = go.GraphObject.make;  // for conciseness in defining templates, avoid $ due to jQuery
+
+      myDiagram = $$(go.Diagram, "myDiagramDiv",  // create a Diagram for the DIV HTML element
+        {
+          "undoManager.isEnabled": true  // enable undo & redo
+        });
+
+      // define a simple Node template
+      myDiagram.nodeTemplate =
+        $$(go.Node, "Auto",  // the Shape will go around the TextBlock
+          $$(go.Shape, "RoundedRectangle", { strokeWidth: 0 },
+            // Shape.fill is bound to Node.data.color
+            new go.Binding("fill", "color")),
+          $$(go.TextBlock,
+            { margin: 8 },  // some room around the text
+            // TextBlock.text is bound to Node.data.key
+            new go.Binding("text", "key"))
+        );
+
+      // but use the default Link template, by not setting Diagram.linkTemplate
+
+      // The previous initialization is the same as the minimal.html sample.
+      // Here we request JSON-format text data from the server, in this case from a static file.
+      jQuery.getJSON("minimal.json", load);
+    }
+
+    function load(jsondata) {
+      // create the model from the data in the JavaScript object parsed from JSON text
+      myDiagram.model = new go.GraphLinksModel(jsondata["nodes"], jsondata["links"]);
+    }
+  
+
 nameFile(); //coloca o nome do arquivo selecionado no <span> da página de eventos > submição de trabalhos
 telefoneMask(); //coloca máscara no input de telefone
 titleAnimation(); //faz a animação de entrada do topo

@@ -51,7 +51,7 @@ header #sidebar ul {
 	padding: 0;
 }
 
-header #sidebar ul li, a {
+header #sidebar > ul > li, a.link-side {
 	list-style: none;
 	padding: 15px 20px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -94,16 +94,16 @@ header #sidebar ul li:first-child::before, li.fechar::before {
 
 header nav ul#logo {
 	float: left;
-	margin-left: -20px;
+	margin-left: -25px;
 	padding: 0;
 }
 
 header nav ul li {
 	background: transparent;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 14px;
 	color: white;
-	padding: 6px 20px;
+	padding: 6px 22px;
 	transition: all 0.2s;
 	border-radius: 100px;
 	cursor: pointer;
@@ -328,6 +328,10 @@ header form #image-login {
 	margin-top: 10px;
 	font-size: 12px;
 	color: #848ea4;
+}
+
+saad p {
+	font-size: 14px;
 }
 
 
