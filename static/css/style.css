@@ -334,6 +334,137 @@ saad p {
 	font-size: 14px;
 }
 
+table thead {
+  font-size: 13px;
+  font-weight: 700!important;
+  color: black!important;
+  border-top: 1px solid rgba(0,0,0,0.1)!important;
+  border-bottom: 1px solid rgba(0,0,0,0.1)!important;
+  border-spacing: 20px!important;
+  background-color: rgba(64,153,255,0.1)!important;
+}
+
+table thead tr td {
+	font-weight: bold;
+}
+
+th, td {
+  padding: 15px 40px!important;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: 'Montserrat'!important;
+  border-bottom: 1px solid rgba(0,0,0,0.1)!important;
+}
+
+tr {
+  transition: all 0.2s;
+}
+
+tr:hover {
+  background-color: rgba(64,153,255,0.1)!important;
+}
+
+table thead th {
+  border-bottom: none!important;
+}
+
+table th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table-responsive {
+    display: inline-block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-spacing: 2px;
+    overflow-x: auto;
+}
+
+#contact {
+	background: white;
+	box-shadow: 0 0 30px rgba(0,0,0,0.1);
+	border-radius: 5px;
+	z-index: 3;
+	overflow: hidden;
+}
+
+#contact #info{
+	background-color: #294fa5;
+	padding: 50px 40px;
+	color: white!important;
+	font-size: 14px;
+}
+
+#contact #info h1 {
+	color: white;
+}
+
+#contact .content {
+	padding: 50px 30px;
+}
+
+#contact h1 {
+	font-size: 22px;
+	font-weight: bold;
+	color: #294fa5;
+	margin-bottom: 35px;
+}
+
+#contact label {
+	font-size: 12px;
+	color: #6f95ec;
+	padding: 0;
+	margin: 0;
+}
+
+#contact input, select {
+	background: white;
+	width: 100%;
+	border-bottom: 1px solid #6f95ec;
+	color: #6f95ec;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-bottom: 15px;
+	outline: none;
+	padding: 5px 0;
+}
+
+#contact select {
+	padding: 7.5px 0;
+}
+
+#contact input[type="submit"] {
+	width: auto;
+	background-color: #6f95ec;
+	color: white;
+	font-weight: bold;
+	padding: 5px 50px;
+	border-radius: 4px;
+	float: right;
+	cursor: pointer;
+}
+
+#contact input:focus label {
+	color: red;
+}
+
+footer {
+	background-color: #222;
+	padding: 30px 0;
+	margin-top: -10px;
+	z-index: 2;
+}
+
 
 /*BOOTSTRAP*/
 
