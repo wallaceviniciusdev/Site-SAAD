@@ -146,3 +146,14 @@ select.form-control, input.form-control {
  form #image-login {
 	margin-left: 25px;
 }
+
+@media only screen and (max-width: 950px){
+	#box {
+		min-width: 300px;
+	}
+
+	#login-box {
+		padding: 0 30px;
+	}
+
+}

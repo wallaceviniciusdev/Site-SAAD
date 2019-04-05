@@ -137,3 +137,14 @@ body {
   	box-shadow: 0 0 20px rgba(0,0,0,0.25);
   	margin-top: 50px;
 }
+
+@media only screen and (max-width: 950px){
+	#box {
+		min-width: 300px;
+	}
+
+	#login-box {
+		padding: 0 30px;
+	}
+
+}
