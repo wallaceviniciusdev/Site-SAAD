@@ -24,6 +24,26 @@ function closeSidebar(){
 	})
 }
 
+function roller(){
+	$('li.item:nth-child(2)').click(function() {
+		$('html, body').animate({
+		scrollTop: $('saad').offset().top
+		}, 1000)
+	})
+
+	$('li.item:nth-child(3)').click(function() {
+		$('html, body').animate({
+		scrollTop: $('#sistema').offset().top
+		}, 1000)
+	})
+
+	$('li.item:nth-child(4)').click(function() {
+		$('html, body').animate({
+		scrollTop: $('#contact').offset().top
+		}, 1000)
+	})
+}
+
 function buttonTop(){
 	var btn = $('#toTop')
 
@@ -41,7 +61,7 @@ function buttonTop(){
 	})
 }
 
-function telefoneMask(){
+/*function telefoneMask(){
 	$("input.telefone").mask("(99) 9999-9999?9").focusout(function(event) {  
 		var target, phone, element
 		target = (event.currentTarget) ? event.currentTarget : event.srcElement
@@ -55,10 +75,7 @@ function telefoneMask(){
 			element.mask("(99) 9999-9999")  
 		}  
 	})
-}
-
-var num = 14:30 + 15:30 + 16:30 + 17:30 + 20;
-
+}*/
 
 function nameFile(){
 	var input = $('#input-file')
@@ -86,9 +103,19 @@ function openEvent(){
 
 }
 
+
+function menuFixo(){
+	$(document).ready(function() {
+	if($(window).scrollTop() > 400){
+		console.log("oi anitta")
+	}
+	})
+}
+
+menuFixo()
+roller()
 openEvent() //abre ou fecha um evento
 nameFile() //coloca o nome do arquivo selecionado no <span> da página de eventos > submição de trabalhos
-telefoneMask() //coloca máscara no input de telefone
 titleAnimation() //faz a animação de entrada do topo
 menu() //função que abre o menu
 closeSidebar() //função que fecha o menu
