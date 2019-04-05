@@ -12,45 +12,6 @@
 </head>
 <body>
 	<header>
-		<!-- Modal -->
-		<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<form method="post" accept-charset="utf-8">
-						<div class="row">
-							<div class="col-md">
-								<img src="static/images/login-image.svg" alt="" height="353" id="image-login">
-							</div>
-							<div class="col-md">
-								<div class="title">
-									<h1>Login</h1>
-									<p>Acesse nosso sistema</p>
-								</div>
-								<div class="modal-body">
-									<label for="username">Seu e-mail:</label>
-									<input type="text" name="username" placeholder="Digite seu e-mail">
-
-									<label for="password">Sua senha:</label>
-									<input type="text" name="password" placeholder="Digite sua senha">
-									
-									<div id="conected" class="custom-control custom-checkbox my-1 mr-sm-2">
-										<input type="checkbox" class="custom-control-input" id="customControlInline">
-								    	<label class="custom-control-label conected" for="customControlInline">Manter Conectado</label>
-									</div>
-	
-									<a href=""><i class="fas fa-key"></i> Esqueci a senha</a>
-
-									<div id="buttons">
-										<button type="submit" id="entrar">Entrar</button> 
-										<button type="" id="registrar">Registrar</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
 		<div class="container">
 			<nav>
 				<ul id="logo">
@@ -62,14 +23,14 @@
 					<li class="item">Contato</li>
 					<li class="item">Currículos</li>
 					<a href="events.html" ><li class="item">Eventos</li></a>
-					<li id="login" data-toggle="modal" data-target="#modalLogin"><i class="far fa-user-circle"></i> Acessar</li>
+					<a href="login.html"><li id="login" data-toggle="modal" data-target="#modalLogin"><i class="far fa-user-circle"></i> Acessar</li></a>
 					<li id="icon-menu"><i class="fas fa-list-ul"></i></li>
 				</ul>
 			</nav>
 
 			<div id="sidebar">
 				<ul id="menu">
-					<li id="loginSide" data-toggle="modal" data-target="#modalLogin"><i class="far fa-user-circle"></i> Acessar</li>
+					<a href="login.html"><li id="loginSide" data-toggle="modal" data-target="#modalLogin"><i class="far fa-user-circle"></i> Acessar</li></a>
 					<li class="item">Inicio</li>
 					<li class="item">SAAD</li>
 					<li class="item">Artigos</li>
@@ -90,7 +51,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<img src="static/images/header-image.svg" alt="" id="image-header">
+					<img src="static/images/header.png" alt="" id="image-header">
 				</div>
 			</div>
 		</div>
@@ -106,11 +67,11 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md">
-					
+				<div class="col-md"  id="imagem-saad">
+					<img src="static/images/header-image.svg" height="650" style="position: absolute; margin: -50px 0 0 -130px;">
 				</div>
 				<div class="col-md-7">
-					<p style="text-align: justify; text-indent: 50px;">
+					<p style="text-align: justify; text-indent: 50px; margin-bottom: 70px;">
 						O <b>Sistema de Acompanhamento da Aprendizagem do Discente – SAAD</b> caracteriza o ambiente de aprendizagem tecnológico do Sistema de Aprendizagem em Ação para a educação em Administração, desenvolvido no Brasil, sob a coordenação do professor <b>Anielson Barbosa da Silva, da Universidade Federal da Paraíba – UFPB</b>, mas que possui aderência a todas as áreas da educação superior brasileira. O SAAD é uma plataforma online com informações pessoais e acadêmicas dos alunos, que subsidia não apenas ações de direcionamento em torno da carreira e da aprendizagem, como também dispõe de módulos que auxiliam os docentes no planejamento e operacionalização de ações voltadas para o ensino. Alguns recursos do SAAD envolvem a auto percepção sobre a carreira, elaboração de planos de carreira e currículo, avaliação dos estilos de aprendizagem, plataforma de casos para ensino, canal de vídeos, além do planejamento de atividades de apoio à aprendizagem, pelo professor, como por exemplo questionários de avaliação, gestão de atividades complementares, entre outros. Esse conjunto de informações possibilitará acompanhar todo o desenvolvimento do aluno ao longo do curso e também auxiliará os docentes na análise do perfil dos alunos e no planejamento de ações de ensino a partir de perspectivas experienciais de aprendizagem centradas no estudante. O desenvolvimento do SAAD é uma ação de um projeto de pesquisa que recebeu apoio financeiro do Conselho Nacional de Desenvolvimento Científico e Tecnológico – CNPq, como também do Instituto Brasileiro de Estudos e Pesquisas Sociais – IBEPES.
 					</p>
 				</div>
@@ -124,12 +85,23 @@
 
 	</saad>
 
+	<section id="sistema">
+		<div class="container">
+			<div id="section-title">
+				<h6>SOBRE O SITE</h6>
+				<h1>Sistema de Aprendizagem</h1>
+				<div></div>
+				<p>Acompanhe nossos eventos</p>
+			</div>
+		</div>
+	</section>
+
 	<div class="container">
 		<div class="row" id="contact">
 			<div class="col-md">
 				<div class="content">
-					<h1>Nos envie uma mensagem</h1>
-					<form action="">
+					<h1><i class="far fa-envelope"></i> Nos envie uma mensagem</h1>
+					<form>
 						<div class="row">
 							<div class="col-md">
 								<label for="nome">Seu nome</label>
@@ -165,9 +137,11 @@
 				</div>
 			</div>
 			<div class="col-md-4" id="info">
-				<h1>Informações</h1>
+				<h1><i class="fas fa-info-circle"></i> Informações</h1>
 				<div class="row">
-					<div class="col-md-1">oi</div>
+					<div class="col-md-1">
+						<i class="fas fa-map-marked-alt"></i>
+					</div>
 					<div class="col-md">
 						<b>Observatório de Pesquisa e Prática em Administração | UFPB</b>
 						<p>Jardim Cidade Universitária CEP: 58059-900. João Pessoa/PB.</p>
@@ -175,7 +149,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-1">oi</div>
+					<div class="col-md-1"><i class="fas fa-envelope"></i></div>
 					<div class="col-md">
 						<b>contato@saad.net.br</b>
 						<p><b>oppa.ufpb@gmail.com</b></p>
@@ -183,7 +157,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-1">oi</div>
+					<div class="col-md-1"><i class="fas fa-phone"></i></div>
 					<div class="col-md">
 						<b>+55 (83) 3652-1320</b>
 					</div>
